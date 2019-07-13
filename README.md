@@ -13,3 +13,7 @@ optional arguments:
   -s {time,time_asc,title}, --sort {time,time_asc,title}
                         Project sort type (default: time)
 ```
+
+## Screenshot
+
+![](screenshot.png)
