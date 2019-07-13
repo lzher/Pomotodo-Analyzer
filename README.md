@@ -1,5 +1,7 @@
 # Pomotodo Analyzer
 
+A time analyzer for [Pomotodo](https://pomotodo.com).
+
 ## Usage
 
 ```
