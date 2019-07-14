@@ -22,6 +22,7 @@ def main():
     pomofile.close()
 
     # Collect entries
+    TotalTime = datetime.timedelta()
     Entries = {}
     for line in lines[1:]:
         line = line[:-1]
@@ -31,6 +32,7 @@ def main():
         title = ','.join(sep[3:])
         time_delta = time_end - time_start
         Entries[title] = Entries.get(title, datetime.timedelta()) + time_delta
+        TotalTime += time_delta
     
     # Collect projects
     project_regex = re.compile('#([\S]*)')
@@ -61,6 +63,8 @@ def main():
     # Print statistical results
     print("")
     print("="*6, "Pomotodo Analyzer", "="*6)
+    print("")
+    print("Total:", str(TotalTime))
     print("")
     for project in Projects:
         print(project, str(ProjectTime[project]))
